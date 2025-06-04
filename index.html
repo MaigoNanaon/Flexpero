@@ -319,8 +319,9 @@
   </div>
 </section>
 <!-- End paper abstract -->
-  <h3 style="text-align: center;"><br>Note: A short video about how Flexpéro works in fine-grained controll is coming. Promptts++ does not support well on languages other than English, so most examples provided are in English.</h3>
-<h2 class="title"><br>Model Structure</h2>
+ <!-- <h3 style="text-align: center;"><br>Note: A short video about how Flexpéro works in fine-grained controll is coming. Promptts++ does not support well on languages other than English, so most examples provided are in English.</h3>
+-->
+  <h2 class="title"><br>Model Structure</h2>
 <div class="pdf-container">
     <canvas id="pdf-canvas1"></canvas>
 </div>
@@ -496,10 +497,122 @@
         </div>
     </div>
 
+<br><br><h2 class="title">3. V-A control over each dimension</h2>
 
 
-<br><br><br><br><br><br>
+  <h3  style="text-align: center;">To examine how valence (V) and arousal (A) dimensions independently influence expressive control, and make nuance changes to speech.</h3>
 
+  <div class="matrix-container">
+
+        <div class="audio-matrix2">
+            <!-- 标题行 -->
+            <div class="matrix-cell title-cell">Ground truth</div>
+            <div class="matrix-cell title-cell text-cell">Text</div>
+            <div class="matrix-cell text-cell"></div>
+            <div class="matrix-cell text-cell"></div>
+
+
+            <!-- 音频数据行 -->
+            <!-- 每行7个音频单元 -->
+            <!-- 示例数据，请替换为实际音频文件 -->
+
+
+            <div class="matrix-cell"><audio controls src="static/dim/D2GT.wav"></audio></div>
+            <div class="matrix-cell text-cell"><p>The panic subsided, <span style="font-weight: bold;"> but the vampire had already taken root in Western Europe's imagination, </span>spawning works like The Vampire in 1819 and Joseph Sheridan Le Fanu's Carmilla in 1872.  </p></div>
+            <div class="matrix-cell text-cell"></div>
+            <div class="matrix-cell text-cell"></div>
+
+            <div class="matrix-cell text-cell"><p> Instructions</p></div>
+            <div class="matrix-cell text-cell"><p> CosyVoice (Prompt audio: Ground truth; Prompt text: Instructions)</p></div>
+            <div class="matrix-cell"><p> V-A control</p></div>
+            <div class="matrix-cell text-cell"><p> Flexpéro (Prompt context: Ground truth; Control: Stage 1 V-A only, no key-frames)</p></div>
+
+            <div class="matrix-cell text-cell"><p>Bold text: excited, of high strength</p></div>
+            <div class="matrix-cell text-cell"><audio controls src="static/dim/D2A1co.wav"></audio></div>
+                <div class="matrix-cell"><p>Bold text: A +0.2</p></div>
+            <div class="matrix-cell text-cell"><audio controls src="static/dim/D2A1.wav"></audio></div>
+            <div class="matrix-cell text-cell"><p>Bold text: slightly activated</p></div>
+            <div class="matrix-cell text-cell"><audio controls src="static/dim/D2A2co.wav"></audio></div>
+                <div class="matrix-cell"><p>Bold text: A +0.1</p></div>
+            <div class="matrix-cell text-cell"><audio controls src="static/dim/D2A2.wav"></audio></div>
+                        <div class="matrix-cell text-cell"><p>Bold text: relatively calm</p></div>
+            <div class="matrix-cell text-cell"><audio controls src="static/dim/D2A3co.wav"></audio></div>
+                <div class="matrix-cell"><p>Bold text: A -0.1</p></div>
+            <div class="matrix-cell text-cell"><audio controls src="static/dim/D2A3.wav"></audio></div>
+                        <div class="matrix-cell text-cell"><p>Bold text: peaceful, collected</p></div>
+            <div class="matrix-cell text-cell"><audio controls src="static/dim/D2A4co.wav"></audio></div>
+                <div class="matrix-cell"><p>Bold text: A -0.2</p></div>
+            <div class="matrix-cell text-cell"><audio controls src="static/dim/D2A4.wav"></audio></div>
+                        <div class="matrix-cell text-cell"><p>Bold text: slightly positive</p></div>
+            <div class="matrix-cell text-cell"><audio controls src="static/dim/D2V1co.wav"></audio></div>
+                <div class="matrix-cell"><p>Bold text: V +0.15</p></div>
+            <div class="matrix-cell text-cell"><audio controls src="static/dim/D2V1.wav"></audio></div>
+                        <div class="matrix-cell text-cell"><p>Bold text: slightly negative</p></div>
+            <div class="matrix-cell text-cell"><audio controls src="static/dim/D2V4co.wav"></audio></div>
+                <div class="matrix-cell"><p>Bold text: V -0.15</p></div>
+            <div class="matrix-cell text-cell"><audio controls src="static/dim/D2V4.wav"></audio></div>
+
+            <!-- 继续添加剩余6行... -->
+        </div>
+    </div>
+<br>
+
+  <div class="matrix-container">
+
+        <div class="audio-matrix2">
+            <!-- 标题行 -->
+            <div class="matrix-cell title-cell">Ground truth</div>
+            <div class="matrix-cell title-cell text-cell">Text</div>
+            <div class="matrix-cell text-cell"></div>
+            <div class="matrix-cell text-cell"></div>
+
+
+            <!-- 音频数据行 -->
+            <!-- 每行7个音频单元 -->
+            <!-- 示例数据，请替换为实际音频文件 -->
+
+
+            <div class="matrix-cell"><audio controls src="static/dim/D1GT.wav"></audio></div>
+            <div class="matrix-cell text-cell"><p><span style="font-weight: bold;"> So you can always come back to the screen. If you select your project, </span>go to the target. So this is your app and then go to the general section.  </p></div>
+            <div class="matrix-cell text-cell"></div>
+            <div class="matrix-cell text-cell"></div>
+
+            <div class="matrix-cell text-cell"><p> Instructions</p></div>
+            <div class="matrix-cell text-cell"><p> CosyVoice (Prompt audio: Ground truth; Prompt text: Instructions)</p></div>
+            <div class="matrix-cell"><p> V-A control</p></div>
+            <div class="matrix-cell text-cell"><p> Flexpéro (Prompt context: Ground truth; Control: Stage 1 V-A only, no key-frames)</p></div>
+
+
+            <div class="matrix-cell text-cell"><p>Bold text: excited, of high strength</p></div>
+            <div class="matrix-cell text-cell"><audio controls src="static/dim/D1A1co.wav"></audio></div>
+                <div class="matrix-cell"><p>Bold text: A +0.2</p></div>
+            <div class="matrix-cell text-cell"><audio controls src="static/dim/D1A1.wav"></audio></div>
+            <div class="matrix-cell text-cell"><p>Bold text: slightly activated</p></div>
+            <div class="matrix-cell text-cell"><audio controls src="static/dim/D1A2co.wav"></audio></div>
+                <div class="matrix-cell"><p>Bold text: A +0.1</p></div>
+            <div class="matrix-cell text-cell"><audio controls src="static/dim/D1A2.wav"></audio></div>
+                        <div class="matrix-cell text-cell"><p>Bold text: relatively calm</p></div>
+            <div class="matrix-cell text-cell"><audio controls src="static/dim/D1A3co.wav"></audio></div>
+                <div class="matrix-cell"><p>Bold text: A -0.1</p></div>
+            <div class="matrix-cell text-cell"><audio controls src="static/dim/D1A3.wav"></audio></div>
+                        <div class="matrix-cell text-cell"><p>Bold text: peaceful, collected</p></div>
+            <div class="matrix-cell text-cell"><audio controls src="static/dim/D1A4co.wav"></audio></div>
+                <div class="matrix-cell"><p>Bold text: A -0.2</p></div>
+            <div class="matrix-cell text-cell"><audio controls src="static/dim/D1A4.wav"></audio></div>
+                        <div class="matrix-cell text-cell"><p>Bold text: slightly positive</p></div>
+            <div class="matrix-cell text-cell"><audio controls src="static/dim/D1V1co.wav"></audio></div>
+                <div class="matrix-cell"><p>Bold text: V +0.15</p></div>
+            <div class="matrix-cell text-cell"><audio controls src="static/dim/D1V1.wav"></audio></div>
+                        <div class="matrix-cell text-cell"><p>Bold text: slightly negative</p></div>
+            <div class="matrix-cell text-cell"><audio controls src="static/dim/D1V4co.wav"></audio></div>
+                <div class="matrix-cell"><p>Bold text: V -0.15</p></div>
+            <div class="matrix-cell text-cell"><audio controls src="static/dim/D1V4.wav"></audio></div>
+
+            <!-- 继续添加剩余6行... -->
+        </div>
+    </div>
+
+<br><br><br><br><br>
 <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
 
 
